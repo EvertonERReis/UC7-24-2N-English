@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Galactic Mission - RPG</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="game-container">
+
+    <!-- TELA INICIAL -->
+    <div id="start-screen" class="screen active">
+
+        <h1>The Galactic Mission</h1>
+
+        <p class="intro-text">
+            You are the commander of the starship <strong>Alpha-1</strong>.
+        </p>
+
+        <p class="intro-text">
+            Complete the sentences correctly to survive.
+        </p>
+
+        <button class="btn-primary" onclick="startGame()">
+            Start Mission
+        </button>
+
+    </div>
+
+
+    <!-- TELA PRINCIPAL -->
+    <div id="game-screen" class="screen hidden">
+
+        <!-- TOPO -->
+        <header>
+
+            <div class="game-info">
+
+                <h2 id="chapter-title">
+                    Chapter 1
+                </h2>
+
+                <div class="xp-bar-container">
+
+                    <span>
+                        XP:
+                        <span id="xp-display">0</span>
+                    </span>
+
+                    <div class="progress-bar">
+                        <div id="progress-fill"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- HISTÓRIA -->
+        <div class="story-box">
+
+            <p id="story-text">
+                <!-- Texto aparece aqui -->
+            </p>
+
+        </div>
+
+
+        <!-- OPÇÕES -->
+        <div id="options-container" class="options-grid">
+            <!-- Botões aparecem aqui -->
+        </div>
+
+
+        <!-- FEEDBACK -->
+        <div id="feedback-area" class="feedback hidden">
+
+            <p id="feedback-message"></p>
+
+            <p id="grammar-explanation"></p>
+
+        </div>
+
+
+        <!-- BOTÃO PRÓXIMA -->
+        <button
+            id="next-button"
+            class="btn-primary"
+            onclick="nextQuestion()"
+            style="display:none;"
+        >
+            Next Question
+        </button>
+
+    </div>
+
+
+    <!-- TELA FINAL -->
+    <div id="end-screen" class="screen hidden">
+
+        <h1>Mission Complete</h1>
+
+        <div class="final-score">
+
+            <p>Final Score:</p>
+
+            <h2 id="final-xp">0 XP</h2>
+
+        </div>
+
+        <div class="story-summary">
+
+            <h3>Your Log Book:</h3>
+
+            <p id="final-summary-text"></p>
+
+        </div>
+
+        <button class="btn-primary" onclick="restartGame()">
+            Play Again
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
